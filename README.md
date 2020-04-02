@@ -10,4 +10,4 @@ This is a compiler for https://github.com/justinmeza/lolcode-spec.
 
 ## To run:
 
-    python3 test.py example.lo 
+    python3 test.py example.lol
