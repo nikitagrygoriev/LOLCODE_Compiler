@@ -13,16 +13,24 @@ class lolcodePrintListener(lolcodeListener):
 		print("left program")
 
 	def enterCode_block(self, ctx):
-		print("entered code_block")
+		print("blosk")
 
 	def exitCode_block(selft, ctx):
-		print("left code_block")
+		print("block")
 
 	def enterStatement(self, ctx):
-		print ("entered statement")
+		print ("statement")
 
 	def exitStatement(self, ctx):
 		print("left statement")
+	
+	def enterPrint_block(self, ctx:lolcodeParser.Print_blockContext):
+		print("%s" % ctx.expression()[0].LABEL())
+
+    # Exit a parse tree produced by lolcodeParser#print_block.
+	def exitPrint_block(self, ctx:lolcodeParser.Print_blockContext):
+		pass
+
 
 def main(argv):
     input_stream = FileStream(argv[1])
