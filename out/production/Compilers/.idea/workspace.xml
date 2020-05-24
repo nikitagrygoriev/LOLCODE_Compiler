@@ -25,6 +25,82 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b89324c-b79b-4169-9157-5b5ddf5f57a8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Compilers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/lolProgram1.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/lolProgram2.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/lolProgram3.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/lolProgram4.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcode.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcode.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcode.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeBaseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeCustomListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeLexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeLexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeLexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lolcode/lolcodeParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/.idea/libraries/com_opencsv_opencsv_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/.idea/libraries/org_antlr_antlr4_maven_plugin_4_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/Compilers.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/examples/lolProgram1.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/examples/lolProgram2.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/examples/lolProgram3.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/examples/lolProgram4.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode/lolcode.g4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode/lolcode.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode/lolcode.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode/lolcodeLexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcode/lolcodeLexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeBaseListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeCustomListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeLexer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeLexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeLexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeListener.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$AddContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$AssignmentContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$BothContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Code_blockContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$CommentContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$DeclarationContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$DivContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$EitherContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Else_if_blockContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$EqualsContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$ExpressionContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Full_expressionContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$FuncContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Func_declContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$GreaterContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$If_blockContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Input_blockContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$LessContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$LoopContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$ModContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$MulContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$NopeContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Not_equalsContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Print_blockContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$Prog_typeContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$ProgramContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$R_allContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$R_anContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$R_anyContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$StatementContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser$SubContext.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/lolcodeParser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Compilers/res/cleanjokes.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/cleanjokes.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
@@ -576,34 +652,34 @@
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="645" y="1394" width="609" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590221314388" />
-    <state x="768" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1590268997364">
+    <state x="768" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1590270546766">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="768" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590268997364" />
+    <state x="768" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590270546766" />
     <state x="768" y="1299" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224119482" />
     <state x="582" y="1335" width="735" height="513" key="FileChooserDialogImpl" timestamp="1590221892406">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="582" y="1335" width="735" height="513" key="FileChooserDialogImpl/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590221892406" />
-    <state width="1874" height="176" key="GridCell.Tab.0.bottom" timestamp="1590268961059">
+    <state width="1874" height="176" key="GridCell.Tab.0.bottom" timestamp="1590279278674">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590268961059" />
+    <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
     <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548893" />
-    <state width="1874" height="176" key="GridCell.Tab.0.center" timestamp="1590268961058">
+    <state width="1874" height="176" key="GridCell.Tab.0.center" timestamp="1590279278674">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590268961058" />
+    <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
     <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548892" />
-    <state width="1874" height="176" key="GridCell.Tab.0.left" timestamp="1590268961058">
+    <state width="1874" height="176" key="GridCell.Tab.0.left" timestamp="1590279278674">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590268961058" />
+    <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
     <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548892" />
-    <state width="1874" height="176" key="GridCell.Tab.0.right" timestamp="1590268961058">
+    <state width="1874" height="176" key="GridCell.Tab.0.right" timestamp="1590279278674">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590268961058" />
+    <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
     <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548893" />
     <state x="461" y="84" width="1024" height="845" key="SettingsEditor" timestamp="1590269713068">
       <screen x="0" y="0" width="1920" height="1080" />

@@ -9,6 +9,127 @@ Inspiration from [LOLCode](https://github.com/justinmeza/lolcode-spec/blob/maste
 ## LOLCodev2.0
 Here describe our current possibilites. Tutorial over LOLCodev2.0
 
+#### Program structure
+```
+HAI LOL
+
+KTHXBYE
+```
+LOL is our program type (newly introduced in v2.0). You can replace LOL with 3 mode types available:
+* LOL - With every statement program is delivering one random joke from database (jokes not cenzored yet by development team, if anyone feels offened we're truly sorry)
+* GOT - Normal compiling, no jokes and no additional comments
+* GEEK - Your program does not work as expected? Your're tired of constant printing output? We will do it for you - in our geek mode you are always(24/7) informed what's going on in our compiler 
+
+
+
+#### Available types
+These are called ATOM, which can be:
+* BOOLEAN: WIN (true like) or FAIL (false like)
+* NOOB (sort of None)
+* integer or double values as we know them
+* STRING
+
+#### Statements
+Each program is build of many statements. They can be: 
+
+##### Loop
+TODO
+##### Declaration
+We can either declare empty variable with 'NOOB' value or initialize it at declaration with any available type (see below). 
+```
+I HAS A variable1
+I HAS A variableinitialized ITZ 12
+```
+##### Comment
+TODO
+##### Print block
+Between VISIBLE and MKAY? we put what needs to be printed. 
+```
+VISIBLE "stringtobeprinted" MKAY?
+VISIBLE "stringtobeprinted" 12 WIN zmienna MKAY?
+```
+##### If block
+TODO
+##### Input block
+After keyword GIMMEH we put already declared LABEL (initlialized with NOOB value or already assigned value which will be changed).
+```
+HAI GEEK
+I HAS A zmienna2
+GIMMEH zmienna2
+VISIBLE NOT zmienna2 MKAY?
+KTHXBYE
+```
+##### Function declaration
+TODO
+##### Assignment
+We can also change value of our variable at any time during coding. Below example shows how to do that: 
+```
+I HAS A zmienna ITZ "trolololo"
+zmienna R WIN
+```
+##### Full expression
+Consists of expression and NEWLINE character. 
+* equals - 
+```
+
+```
+* both - 
+```
+
+```
+* not equals - 
+```
+
+```
+* grater - 
+```
+
+```
+* less - 
+```
+
+```
+* add - 
+```
+
+```
+* sub - 
+```
+
+```
+* mul - 
+```
+
+```
+* div - 
+```
+
+```
+* mod - 
+```
+
+```
+* either - 
+```
+
+```
+* r_all - 
+```
+
+```
+* r_any - 
+```
+
+```
+* nope - 
+```
+
+```
+* func - 
+```
+
+```
+Authors hope that funny way of implemented calculations on various type will have positive affect on programmer's mood ;)  
 ## Prerequisites
 
 * Java 8+

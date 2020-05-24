@@ -10,9 +10,9 @@ import java.util.*;
 
 public class lolcodeCustomListener extends lolcodeBaseListener {
 
-    private Map<String, String> variables;
-    private Stack<String> stack1;
-    private String mode;
+    private Map<String, String> variables; //map in which we store our variables
+    private Stack<String> stack1; // stack on which curerent value of expression is stored (we manipulate on it all the time)
+    private String mode; // LOL, GOT, GEEK
     private final String info = "Geek info: ";
 
     public lolcodeCustomListener() {
@@ -22,25 +22,28 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterProgram(lolcodeParser.ProgramContext ctx) {
-        // Print message entering
+        // Printing entering message to program
         super.enterProgram(ctx);
         System.out.print("Welcome to LOLv2.0 programme! You can now laugh to your heart's content! ");
     }
 
     @Override
     public void exitProgram(lolcodeParser.ProgramContext ctx) {
-        // Print message exiting
+        // Printing exiting message to program
         super.exitProgram(ctx);
         System.out.println("LOL has ended! Don't laugh it's not a joke! Bye!");
     }
 
     @Override
     public void enterProg_type(lolcodeParser.Prog_typeContext ctx) {
+        // Nothing special, I needed that to get LOl, GOT, GEEK mode
+        // TODO: Information for GEEK mode
         super.enterProg_type(ctx);
     }
 
     @Override
     public void exitProg_type(lolcodeParser.Prog_typeContext ctx) {
+        // Setting up program mode and printing for everyone
         super.exitProg_type(ctx);
         mode = ctx.getText();
         System.out.println("MODE: "+mode);
@@ -48,13 +51,17 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterDeclaration(lolcodeParser.DeclarationContext ctx) {
+        // Entering declaration and printing for GEEK mode
         super.enterDeclaration(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering declaration!");}
     }
 
     @Override
     public void exitDeclaration(lolcodeParser.DeclarationContext ctx) {
-        //We can declare empty label which is NOOB or label with values. Printing what's going on...
+        // We can declare empty label which is NOOB or label with values. Printing what's going on...
+        // Storing values and variables (labels) names in map
+        // TODO: Enhancements for GEEK mode
+
         super.exitDeclaration(ctx);
 
         if(ctx.ATOM()==null){
@@ -70,12 +77,16 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterInput_block(lolcodeParser.Input_blockContext ctx) {
+        // Just enering input block, GEEK info
         super.enterInput_block(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering input block!");}
     }
 
     @Override
     public void exitInput_block(lolcodeParser.Input_blockContext ctx) {
+        // On exit input block, we get value from user and validate with regexp
+        // We can either add new value to existing label or assign to empty (NOOB)
+        // TODO: Move printing to GEEK mode accordingly as well as add some
         super.exitInput_block(ctx);
         System.out.println(ctx.LABEL());
         String newlabel;
@@ -109,6 +120,7 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterPrint_block(lolcodeParser.Print_blockContext ctx) {
+        // Enterig print block, GEEK mode may be updated
         super.enterPrint_block(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering print block!");}
     }
@@ -116,6 +128,8 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void exitPrint_block(lolcodeParser.Print_blockContext ctx) {
+        // On exiting: we pop from stack, add to array and print values reversed
+        // TODO: Update GEEK mode
         super.exitPrint_block(ctx);
         ArrayList<String> elements = new ArrayList<>();
         for(int n=ctx.getChildCount()-2; n>0; n--) {
@@ -131,12 +145,16 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterExpression(lolcodeParser.ExpressionContext ctx) {
+        // On entering expression, Geek mode may needs updates
         super.enterExpression(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering expression!");}
     }
 
     @Override
     public void exitExpression(lolcodeParser.ExpressionContext ctx) {
+        // Super important! If expression call ends with ATOM we push on stack its value to pop it later on
+        // If we have label at the end, then we search for its value in variables map and push to stack its value
+        // TODO: As it is super important we need to cover that more in GEEK mode. Print as much info as we can.
         super.exitExpression(ctx);
         if(ctx.ATOM()!=null){
             //System.out.println(ctx.ATOM().getText());
@@ -151,12 +169,15 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterEquals(lolcodeParser.EqualsContext ctx) {
+        // On entering equals, GEEK mode may needs updates
         super.enterEquals(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering equals!");}
     }
 
     @Override
     public void exitEquals(lolcodeParser.EqualsContext ctx) {
+        // Exiting equals, using equals in here
+        // TODO: GEEK mode enhancements
         super.exitEquals(ctx);
         String two = stack1.pop();
         String one = stack1.pop();
@@ -171,12 +192,14 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterNot_equals(lolcodeParser.Not_equalsContext ctx) {
+        // Not much difference with equals see above
         super.enterNot_equals(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering not equals!");}
     }
 
     @Override
     public void exitNot_equals(lolcodeParser.Not_equalsContext ctx) {
+        // Not much difference with equals see above
         super.exitNot_equals(ctx);
         String two = stack1.pop();
         String one = stack1.pop();
@@ -191,12 +214,16 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterBoth(lolcodeParser.BothContext ctx) {
+        // Entering both, GEEK mode needs more
         super.enterBoth(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering both!");}
     }
 
     @Override
     public void exitBoth(lolcodeParser.BothContext ctx) {
+        // When on of them NOOB then NOOB
+        // Both cannot be FAIL, 0, 0.0
+        // TODO: Check if it makes sense, must be consistent with other expressions, GEEK mode needs updating
         super.exitBoth(ctx);
         String two = stack1.pop();
         String one = stack1.pop();
@@ -215,12 +242,16 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
 
     @Override
     public void enterEither(lolcodeParser.EitherContext ctx) {
+        // Entering either, GEEK mode check
         super.enterEither(ctx);
         if(mode.equals("GEEK")){System.out.println(info+"You're entering either!");}
     }
 
     @Override
     public void exitEither(lolcodeParser.EitherContext ctx) {
+        // When on of them NOOB then NOOB
+        // Both cannot be FAIL, 0, 0.0
+        // TODO: Check if it makes sense, must be consistent with other expressions, GEEK mode needs updating
         super.exitEither(ctx);
         String two = stack1.pop();
         String one = stack1.pop();
