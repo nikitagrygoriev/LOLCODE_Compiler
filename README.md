@@ -1,5 +1,3 @@
-
-
 # LOLCODEv2.0 Compiler
 
 The project for Compilation Theory and Compilers course at AGH UST made by Computer Science students in 2020. 
@@ -23,7 +21,6 @@ LOL is our program type (newly introduced in v2.0). You can replace LOL with 3 m
 * GEEK - Your program does not work as expected? Your're tired of constant printing output? We will do it for you - in our geek mode you are always(24/7) informed what's going on in our compiler 
 
 
-
 #### Available types
 These are called ATOM, which can be:
 * BOOLEAN: WIN (true like) or FAIL (false like)
@@ -33,6 +30,15 @@ These are called ATOM, which can be:
 
 #### Statements
 Each program is build of many statements. They can be: 
+
+##### Comment
+You can either make comment with string or insert expression into comment as in second example. 
+```
+BTW "here is comment"
+OBTW
+SUM OF 12 AN 16
+TLDR
+```
 
 ##### Declaration
 We can either declare empty variable with 'NOOB' value or initialize it at declaration with any available type (see below). 
@@ -61,6 +67,21 @@ We can also change value of our variable at any time during coding. Below exampl
 I HAS A zmienna ITZ "trolololo"
 zmienna R WIN
 ```
+##### If/else if/ else block
+After O RLY? / YA RLY you need to provide expression providing bool as outcome(for example equals) then specify code_block which should be run afterwards. 
+Else if is achieved by keyword MEBBE and then analogously to if. Else is done by NO WAI and providing code_block which should be run if no if or else if was successful. 
+```
+O RLY?
+YA RLY
+BOTH SAEM 1 AN 2
+VISIBLE "you are in first if" MKAY?
+MEBBE DIFFRINT 3 AN 2
+VISIBLE "you are in else if" MKAY?
+NO WAI
+VISIBLE "you are in else" MKAY?
+OIC
+```
+
 ##### Full expression
 Consists of expression and NEWLINE character. 
 * equals - (==) operation with a little LOL effect
@@ -127,16 +148,6 @@ Another way is to open that in InteliJ, run LOLCODECustomListener.class main met
 
 Feel free now to edit your lolProgram1.lol example file. Enjoy!
 
-## TODO
-Deadline for below tasks is 7th June 2020:
-* loops
-* comments
-* any
-* not (nope)
-* if block
-* else if block
-* functions
-
 
 ## Built With
 
@@ -153,6 +164,11 @@ Deadline for below tasks is 7th June 2020:
 
 But main inspiration for this project is to make programming fun again. It's not about making perfect language and compiler.
 It's about motivating to learning more to create entertaining things and developing ourselves. 
+
+## Future works
+Authors propose to add these 2 elements in order to achieve complete lolcode language. But as it is students' project it cannot be perfect ;) 
+* loops
+* functions
 
 ## Versioning
 

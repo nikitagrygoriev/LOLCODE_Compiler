@@ -13,20 +13,15 @@ code_block
    ;
 
 statement
-   : loop NEWLINE
-   | declaration NEWLINE
+   : declaration NEWLINE
    | comment NEWLINE
    | print_block NEWLINE
    | if_block NEWLINE
    | input_block NEWLINE
-   | func_decl NEWLINE
    | assignment NEWLINE
    | full_expression
    ;
 
-loop
-   : 'IM IN YR' LABEL 'WILE' full_expression code_block 'IM OUTTA YR' LABEL
-   ;
 
 declaration
    : 'I HAS A' LABEL
@@ -35,7 +30,7 @@ declaration
 
 comment
    : 'BTW' expression
-   | 'OBTW' NEWLINE full_expression 'TLDR'
+   | 'OBTW' NEWLINE full_expression* 'TLDR'
    | 'BTW' STRING
    | 'OBTW' NEWLINE STRING NEWLINE 'TLDR'
    ;
@@ -45,22 +40,18 @@ print_block
    ;
 
 if_block
-   : 'O RLY?' NEWLINE 'YA RLY' NEWLINE code_block 'OIC'
-   | 'O RLY?' NEWLINE 'YA RLY' NEWLINE code_block else_if_block 'OIC'
+   : 'O RLY?' NEWLINE 'YA RLY' NEWLINE (equals|not_equals|both|either|greater|less) NEWLINE code_block 'OIC'
+   | 'O RLY?' NEWLINE 'YA RLY' NEWLINE (equals|not_equals|both|either|greater|less) NEWLINE else_if_block 'OIC'
    ;
 
 else_if_block
-   : 'MEBBE' full_expression code_block else_if_block
+   : 'MEBBE' (equals|not_equals|both|either|greater|less) NEWLINE code_block else_if_block
    | 'NO WAI' NEWLINE code_block
-   | 'MEBBE' full_expression code_block
+   | 'MEBBE' (equals|not_equals|both|either|greater|less) NEWLINE code_block
    ;
 
 input_block
    : 'GIMMEH' LABEL
-   ;
-
-func_decl
-   : 'HOW DUZ I' LABEL (('YR' LABEL) ('AN YR' LABEL)*)? NEWLINE code_block 'IF U SAY SO'
    ;
 
 assignment
@@ -135,21 +126,11 @@ mod
    : 'MOD OF' expression r_an
    ;
 
-r_all
-   : 'ALL OF' expression r_an* 'MKAY?'
-   ;
-
-r_any
-   : 'ANY OF' expression r_an* 'MKAY?'
-   ;
 
 nope
    : 'NOT' expression
    ;
 
-func
-   : 'I IZ' LABEL expression ('AN' expression)* 'MKAY?'
-   ;
 
 r_an
    : 'AN' expression

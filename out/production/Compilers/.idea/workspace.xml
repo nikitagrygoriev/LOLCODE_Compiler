@@ -31,6 +31,7 @@
       <change afterPath="$PROJECT_DIR$/examples/lolProgram2.lol" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/examples/lolProgram3.lol" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/examples/lolProgram4.lol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examples/lolProgram5.lol" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lolcode/lolcode.g4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lolcode/lolcode.interp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lolcode/lolcode.tokens" afterDir="false" />
@@ -585,10 +586,11 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/res" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build.tools" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -607,7 +609,7 @@
     <configuration name="lolcodeCustomListener" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lolcodeCustomListener" />
       <module name="Compilers" />
-      <option name="PROGRAM_PARAMETERS" value="examples/lolProgram1.lol" />
+      <option name="PROGRAM_PARAMETERS" value="examples/lolProgram5.lol" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -644,53 +646,64 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="427" y="1307" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590224005347">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state x="492" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591434643749">
+      <screen x="83" y="0" width="1837" height="1080" />
     </state>
+    <state x="427" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590948918176" />
     <state x="427" y="1307" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224005347" />
+    <state x="492" y="227" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.1080.1920.1080/83.0.1837.1080@83.0.1837.1080" timestamp="1591434643749" />
     <state x="645" y="1394" width="609" height="396" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590221314388">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="645" y="1394" width="609" height="396" key="#com.intellij.fileTypes.FileTypeChooser/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590221314388" />
-    <state x="768" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1590270546766">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="818" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser" timestamp="1591433938937">
+      <screen x="83" y="0" width="1837" height="1080" />
     </state>
     <state x="768" y="219" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590270546766" />
     <state x="768" y="1299" width="374" height="585" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224119482" />
+    <state x="818" y="219" key="#com.intellij.ide.util.MemberChooser/0.1080.1920.1080/83.0.1837.1080@83.0.1837.1080" timestamp="1591433938937" />
     <state x="582" y="1335" width="735" height="513" key="FileChooserDialogImpl" timestamp="1590221892406">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>
     <state x="582" y="1335" width="735" height="513" key="FileChooserDialogImpl/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590221892406" />
-    <state width="1874" height="176" key="GridCell.Tab.0.bottom" timestamp="1590279278674">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1874" height="176" key="GridCell.Tab.0.bottom" timestamp="1590345196633">
+      <screen x="0" y="27" width="1920" height="972" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
+    <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590338403533" />
     <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548893" />
-    <state width="1874" height="176" key="GridCell.Tab.0.center" timestamp="1590279278674">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1874" height="176" key="GridCell.Tab.0.bottom/0.1080.1920.1080/0.27.1920.972@0.27.1920.972" timestamp="1590345196633" />
+    <state width="1874" height="176" key="GridCell.Tab.0.center" timestamp="1590345196633">
+      <screen x="0" y="27" width="1920" height="972" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
+    <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590338403533" />
     <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548892" />
-    <state width="1874" height="176" key="GridCell.Tab.0.left" timestamp="1590279278674">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1874" height="176" key="GridCell.Tab.0.center/0.1080.1920.1080/0.27.1920.972@0.27.1920.972" timestamp="1590345196633" />
+    <state width="1874" height="176" key="GridCell.Tab.0.left" timestamp="1590345196633">
+      <screen x="0" y="27" width="1920" height="972" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
+    <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590338403533" />
     <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548892" />
-    <state width="1874" height="176" key="GridCell.Tab.0.right" timestamp="1590279278674">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1874" height="176" key="GridCell.Tab.0.left/0.1080.1920.1080/0.27.1920.972@0.27.1920.972" timestamp="1590345196633" />
+    <state width="1874" height="176" key="GridCell.Tab.0.right" timestamp="1590345196633">
+      <screen x="0" y="27" width="1920" height="972" />
     </state>
-    <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590279278674" />
+    <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590338403533" />
     <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590224548893" />
-    <state x="461" y="84" width="1024" height="845" key="SettingsEditor" timestamp="1590269713068">
+    <state width="1874" height="176" key="GridCell.Tab.0.right/0.1080.1920.1080/0.27.1920.972@0.27.1920.972" timestamp="1590345196633" />
+    <state x="461" y="84" width="1024" height="845" key="SettingsEditor" timestamp="1590953169633">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="84" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590269713068" />
+    <state x="461" y="84" width="1024" height="845" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590953169633" />
     <state x="461" y="1164" width="1024" height="845" key="SettingsEditor/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590222218313" />
     <state x="627" y="315" width="720" height="459" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1590269699670">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="627" y="315" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590269699670" />
     <state x="627" y="1395" width="720" height="459" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1590222179116" />
+    <state x="79" y="1126" width="1639" height="753" maximized="true" key="dock-window-1" timestamp="1590319746121">
+      <screen x="0" y="1080" width="1920" height="1080" />
+    </state>
+    <state x="79" y="1126" width="1639" height="753" maximized="true" key="dock-window-1/0.1080.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1590319746121" />
     <state x="269" y="1194" width="1372" height="796" key="new project wizard" timestamp="1590223809927">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>

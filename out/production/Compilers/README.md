@@ -69,66 +69,61 @@ zmienna R WIN
 ```
 ##### Full expression
 Consists of expression and NEWLINE character. 
-* equals - 
+* equals - (==) operation with a little LOL effect
 ```
-
+BOTH SAEM 12 AN "WIN"
 ```
-* both - 
+* no equals - (!=) operation with a little LOL effect
 ```
-
+DIFFRINT WIN AN FAIL
 ```
-* not equals - 
+* both - (AND) operation with a little LOL effect
 ```
-
+BOTH OF "me" AN "you"
 ```
-* grater - 
+* grater - (>) operation with a little LOL effect
 ```
-
+BIGGR OF 12 AN 11.999
 ```
-* less - 
+* less - (<) operation with a little LOL effect
 ```
-
+I HAS A zmienna ITZ "you"
+SMALLR OF zmienna AN "zmienna"
 ```
-* add - 
+* add - (+) operation with a little LOL effect
 ```
-
+SUM OF 12 AN 12
 ```
-* sub - 
+* sub - (-) operation with a little LOL effect
 ```
-
+DIFF OF "string" AN WIN
 ```
-* mul - 
+* mul - (*) operation with a little LOL effect
 ```
-
+PRODUKT OF 134 AN FAIL
 ```
-* div - 
+* div - (/) operation with a little LOL effect
 ```
-
+QUOSHUNT OF SUM OF 12 AN 15 AN "text"
 ```
-* mod - 
+* mod - (%) operation with a little LOL effect
 ```
-
+MOD OF 100 AN 10
 ```
-* either - 
+* either - (XOR) operation with a little LOL effect
 ```
-
+EITHER OF 1 AN 0
 ```
-* r_all - 
-```
-
-```
+TODO
 * r_any - 
-```
-
-```
+TODO
 * nope - 
 ```
-
+NOT "alamakota"
 ```
 * func - 
-```
+TODO
 
-```
 Authors hope that funny way of implemented calculations on various type will have positive affect on programmer's mood ;)  
 ## Prerequisites
 
@@ -161,6 +156,16 @@ Deadline for below tasks is 7th June 2020:
 * [ANTLR4](https://www.antlr.org/) - Powerful parser generator
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [Java](https://www.java.com/en/) - Java is a general-purpose programming language, Oracle
+
+## Inspiration
+
+* [AGH syllabus](https://syllabuskrk.agh.edu.pl/2017-2018/pl/magnesite/study_plans/stacjonarne-informatyka--6/module/eit-1-602-s-teoria-kompilacji-i-kompilatory) - Great source of our last 3 years inspiration to do anything. 
+* [PJM website](https://home.agh.edu.pl/~pjm/didactics/compilers/home) - Motivation to work hard and meet deadlines (at least try)
+* [LOLCode](https://github.com/justinmeza/lolcode-spec/blob/master/v1.2/lolcode-spec-v1.2.md) - Idea to make programming fun, not necessarily clear and logic
+* [CleanJokes](https://github.com/amoudgl/short-jokes-dataset/blob/master/data/reddit-cleanjokes.csv) - Some of the jokes under this link
+
+But main inspiration for this project is to make programming fun again. It's not about making perfect language and compiler.
+It's about motivating to learning more to create entertaining things and developing ourselves. 
 
 ## Versioning
 

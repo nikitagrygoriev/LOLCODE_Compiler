@@ -11,9 +11,11 @@ import java.util.*;
 public class lolcodeCustomListener extends lolcodeBaseListener {
 
     private Map<String, String> variables; //map in which we store our variables
-    private Stack<String> stack1; // stack on which curerent value of expression is stored (we manipulate on it all the time)
+    private Stack<String> stack1; // stack on which current value of expression is stored (we manipulate on it all the time)
     private String mode; // LOL, GOT, GEEK
     private final String info = "Geek info: ";
+    private int loopState=0; //0 not if,else 1-yes but already satisfied 2-yes but still waiting
+    private boolean isTrue = false;
 
     public lolcodeCustomListener() {
         variables = new HashMap<>();
@@ -63,16 +65,18 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         // TODO: Enhancements for GEEK mode
 
         super.exitDeclaration(ctx);
-
-        if(ctx.ATOM()==null){
-            System.out.println("You've just declared empty variable!");
-            variables.put(ctx.getChild(1).getText(), "NOOB");
-        }
+        if(loopState==1 || (loopState==2 && !isTrue)){}
         else{
-            variables.put(ctx.getChild(1).getText(), ctx.ATOM().getText());
-            System.out.println("You've decalred: "+ctx.getChild(1).toString()+" with value: "+variables.get(ctx.getChild(1).toString()));
+            if(ctx.ATOM()==null){
+                System.out.println("You've just declared empty variable!");
+                variables.put(ctx.getChild(1).getText(), "NOOB");
+            }
+            else{
+                variables.put(ctx.getChild(1).getText(), ctx.ATOM().getText());
+                System.out.println("You've decalred: "+ctx.getChild(1).toString()+" with value: "+variables.get(ctx.getChild(1).toString()));
+            }
+            if(mode.equals("GEEK")){System.out.println(info+"You're exiting declaration!");}
         }
-        if(mode.equals("GEEK")){System.out.println(info+"You're exiting declaration!");}
     }
 
     @Override
@@ -88,34 +92,38 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         // We can either add new value to existing label or assign to empty (NOOB)
         // TODO: Move printing to GEEK mode accordingly as well as add some
         super.exitInput_block(ctx);
-        System.out.println(ctx.LABEL());
-        String newlabel;
-        Scanner sc = new Scanner(System.in);
-        while(true){
-            System.out.println("Gimme "+ctx.LABEL().getText()+" label value: ");
-            newlabel = sc.nextLine();
-            System.out.println("You gimmed: "+newlabel);
-            if(newlabel.matches("WIN|FAIL|[0-9]*|[0-9]*\\.[0-9]*|[a-zA-Z]*|(^\\\"(\"|[^\"])*\"$)")){
-                if(variables.get(ctx.LABEL().getText())!=null){
-                    variables.replace(ctx.LABEL().getText(), newlabel);
-                }
-                else{
-                    variables.put(ctx.LABEL().getText(), newlabel);
-                }
-                break;
-            }
-            else {
-                System.out.println("Wait you cheater! Gimme ATOM!!!");
-            }
-        }
-
-        if(variables.get(ctx.LABEL().getText())!=null){
-            System.out.println("new label");
-        }
+        if(loopState==1 || (loopState==2 && !isTrue)){}
         else{
+            System.out.println(ctx.LABEL());
+            String newlabel;
+            Scanner sc = new Scanner(System.in);
+            while(true){
+                System.out.println("Gimme "+ctx.LABEL().getText()+" label value: ");
+                newlabel = sc.nextLine();
+                System.out.println("You gimmed: "+newlabel);
+                if(newlabel.matches("WIN|FAIL|[0-9]*|[0-9]*\\.[0-9]*|[a-zA-Z]*|(^\\\"(\"|[^\"])*\"$)")){
+                    if(variables.get(ctx.LABEL().getText())!=null){
+                        variables.replace(ctx.LABEL().getText(), newlabel);
+                    }
+                    else{
+                        variables.put(ctx.LABEL().getText(), newlabel);
+                    }
+                    break;
+                }
+                else {
+                    System.out.println("Wait you cheater! Gimme ATOM!!!");
+                }
+            }
 
+            if(variables.get(ctx.LABEL().getText())!=null){
+                System.out.println("new label");
+            }
+            else{
+
+            }
+            if(mode.equals("GEEK")){System.out.println(info+"You're exiting input block!");}
         }
-        if(mode.equals("GEEK")){System.out.println(info+"You're exiting input block!");}
+
     }
 
     @Override
@@ -131,16 +139,20 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         // On exiting: we pop from stack, add to array and print values reversed
         // TODO: Update GEEK mode
         super.exitPrint_block(ctx);
-        ArrayList<String> elements = new ArrayList<>();
-        for(int n=ctx.getChildCount()-2; n>0; n--) {
-            elements.add(stack1.pop());
+        if(loopState==1 || (loopState==2 && !isTrue)){}
+        else{
+            if(isTrue){loopState=1;}
+            ArrayList<String> elements = new ArrayList<>();
+            for(int n=ctx.getChildCount()-2; n>0; n--) {
+                elements.add(stack1.pop());
+            }
+            for(int j=elements.size()-1; j>=0; j--) {
+                System.out.print(elements.get(j));
+                System.out.print(" ");
+            }
+            System.out.print("\n");
+            if(mode.equals("GEEK")){System.out.println(info+"You're exiting print block!");}
         }
-        for(int j=elements.size()-1; j>=0; j--) {
-            System.out.print(elements.get(j));
-            System.out.print(" ");
-        }
-        System.out.print("\n");
-        if(mode.equals("GEEK")){System.out.println(info+"You're exiting print block!");}
     }
 
     @Override
@@ -164,7 +176,8 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
             stack1.push(variables.get(ctx.LABEL().getText()));
             //System.out.println(variables.get(ctx.LABEL().getText()));
         }
-        if(mode.equals("GEEK")){System.out.println(info+"You're exiting declaration!");}
+        if(mode.equals("GEEK")){System.out.println(info+"You're exiting expression!");}
+
     }
 
     @Override
@@ -187,6 +200,11 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         else{
             stack1.push("FAIL");
         }
+        if(loopState!=0){
+            String score = stack1.pop();
+            if(parseToDoubleEveything(score)==1.0){isTrue=true;}
+            else{isTrue=false;}
+        }
         if(mode.equals("GEEK")){System.out.println(info+"You're exiting equals!");}
     }
 
@@ -208,6 +226,11 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         }
         else{
             stack1.push("FAIL");
+        }
+        if(loopState!=0){
+            String score = stack1.pop();
+            if(parseToDoubleEveything(score)==1.0){isTrue=true;}
+            else{isTrue=false;}
         }
         if(mode.equals("GEEK")){System.out.println(info+"You're exiting not equals!");}
     }
@@ -236,6 +259,11 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         }
         else{
             stack1.push("WIN");
+        }
+        if(loopState!=0){
+            String score = stack1.pop();
+            if(parseToDoubleEveything(score)==1.0){isTrue=true;}
+            else{isTrue=false;}
         }
         if(mode.equals("GEEK")){System.out.println(info+"You're exiting both!");}
     }
@@ -470,14 +498,17 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
     @Override
     public void exitAssignment(lolcodeParser.AssignmentContext ctx) {
         super.exitAssignment(ctx);
-        System.out.println(ctx.getChild(0).getText());
-        if(variables.get(ctx.getChild(0).getText())!=null){
-            variables.replace(ctx.getChild(0).getText(), stack1.pop());
+        if(loopState==1 || (loopState==2 && !isTrue)){}
+        else {
+            if (variables.get(ctx.getChild(0).getText()) != null) {
+                variables.replace(ctx.getChild(0).getText(), stack1.pop());
+            } else {
+                System.out.println("No such LABEL you liar! Declare first!");
+            }
+            if (mode.equals("GEEK")) {
+                System.out.println(info + "You're exiting assignment!");
+            }
         }
-        else{
-            System.out.println("No such LABEL you liar! Declare first!");
-        }
-        if(mode.equals("GEEK")){System.out.println(info+"You're exiting assignment!");}
     }
 
     @Override
@@ -512,39 +543,46 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
         if(mode.equals("GEEK")){System.out.println(info+"You're exiting statement!");}
     }
 
-    // TODO:
-//
-//    @Override
-//    public void enterR_all(lolcodeParser.R_allContext ctx) {
-//        super.enterR_all(ctx);
-//    }
-//
-//    @Override
-//    public void exitR_all(lolcodeParser.R_allContext ctx) {
-//        super.exitR_all(ctx);
-//
-//        String current = stack1.pop();
-//        String prev;
-//        current = andOnTwoStrings(current, current);
-//        for(int i=0; i<ctx.getChildCount()-2; i++){
-//            prev = stack1.pop();
-//            System.out.println(prev);
-//            current = andOnTwoStrings(current, prev);
-//        }
-//        stack1.push(current);
-//    }
-//
-//    private String andOnTwoStrings(String one, String two){
-//        if(one.equals("NOOB") || two.equals("NOOB")){
-//            return "NOOB";
-//        }
-//        else if(one.equals("FAIL") || one.equals("0") || one.equals("0.0") || two.equals("FAIL") || two.equals("0") || two.equals("0.0")){
-//            return "FAIL";
-//        }
-//        else{
-//            return "WIN";
-//        }
-//    }
+    @Override
+    public void enterComment(lolcodeParser.CommentContext ctx) {
+        super.enterComment(ctx);
+        if(mode.equals("GEEK")){System.out.println(info+"You're entering comment!");}
+        System.out.println("ICYMI: there is comment! IDC but IMO you should read it. ");
+    }
+
+    @Override
+    public void exitComment(lolcodeParser.CommentContext ctx) {
+        super.exitComment(ctx);
+        if(mode.equals("GEEK")){System.out.println(info+"You're exiting comment!");}
+    }
+
+    @Override
+    public void enterIf_block(lolcodeParser.If_blockContext ctx) {
+        super.enterIf_block(ctx);
+        loopState = 2;
+        if(mode.equals("GEEK")){System.out.println(info+"You're entering if block!");}
+    }
+
+    @Override
+    public void exitIf_block(lolcodeParser.If_blockContext ctx) {
+        super.exitIf_block(ctx);
+        loopState = 0;
+        if(mode.equals("GEEK")){System.out.println(info+"You're exiting if block!");}
+    }
+
+    @Override
+    public void enterElse_if_block(lolcodeParser.Else_if_blockContext ctx) {
+        super.enterElse_if_block(ctx);
+        if(ctx.getStart().getText().equals("NO WAI")){isTrue=true;}
+        if(mode.equals("GEEK")){System.out.println(info+"You're exiting else if block!");}
+    }
+
+    @Override
+    public void exitElse_if_block(lolcodeParser.Else_if_blockContext ctx) {
+        super.exitElse_if_block(ctx);
+        if(mode.equals("GEEK")){System.out.println(info+"You're exiting else if block!");}
+    }
+
 
     public static void main(String[] args) {
         // Take program argument as lol file to parse
@@ -562,5 +600,4 @@ public class lolcodeCustomListener extends lolcodeBaseListener {
             e.printStackTrace();
         }
     }
-
 }

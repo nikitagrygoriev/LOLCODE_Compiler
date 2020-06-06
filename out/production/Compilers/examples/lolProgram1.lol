@@ -1,3 +1,3 @@
 HAI GOT
-BOTH SAEM 12 AN "WIN"
+VISIBLE "hi to presentation" MKAY?
 KTHXBYE
