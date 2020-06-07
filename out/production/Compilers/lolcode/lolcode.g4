@@ -41,7 +41,7 @@ print_block
 
 if_block
    : 'O RLY?' NEWLINE 'YA RLY' NEWLINE (equals|not_equals|both|either|greater|less) NEWLINE code_block 'OIC'
-   | 'O RLY?' NEWLINE 'YA RLY' NEWLINE (equals|not_equals|both|either|greater|less) NEWLINE else_if_block 'OIC'
+   | 'O RLY?' NEWLINE 'YA RLY' NEWLINE (equals|not_equals|both|either|greater|less) NEWLINE code_block else_if_block 'OIC'
    ;
 
 else_if_block
@@ -74,10 +74,7 @@ expression
    | div
    | mod
    | either
-   | r_all
-   | r_any
    | nope
-   | func
    | LABEL
    | ATOM
    ;

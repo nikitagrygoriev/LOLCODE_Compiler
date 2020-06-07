@@ -3,7 +3,7 @@ O RLY?
 YA RLY
 BOTH SAEM 1 AN 2
 VISIBLE "you are in first if" MKAY?
-MEBBE DIFFRINT 3 AN 3
+MEBBE DIFFRINT 3 AN 2
 VISIBLE "you are in else if" MKAY?
 NO WAI
 VISIBLE "you are in else" MKAY?

@@ -63,18 +63,6 @@ public class lolcodeBaseListener implements lolcodeListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLoop(lolcodeParser.LoopContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitLoop(lolcodeParser.LoopContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterDeclaration(lolcodeParser.DeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -142,18 +130,6 @@ public class lolcodeBaseListener implements lolcodeListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitInput_block(lolcodeParser.Input_blockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFunc_decl(lolcodeParser.Func_declContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunc_decl(lolcodeParser.Func_declContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -327,30 +303,6 @@ public class lolcodeBaseListener implements lolcodeListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterR_all(lolcodeParser.R_allContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitR_all(lolcodeParser.R_allContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterR_any(lolcodeParser.R_anyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitR_any(lolcodeParser.R_anyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterNope(lolcodeParser.NopeContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -358,18 +310,6 @@ public class lolcodeBaseListener implements lolcodeListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNope(lolcodeParser.NopeContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFunc(lolcodeParser.FuncContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunc(lolcodeParser.FuncContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

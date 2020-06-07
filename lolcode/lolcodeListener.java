@@ -47,16 +47,6 @@ public interface lolcodeListener extends ParseTreeListener {
 	 */
 	void exitStatement(lolcodeParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link lolcodeParser#loop}.
-	 * @param ctx the parse tree
-	 */
-	void enterLoop(lolcodeParser.LoopContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link lolcodeParser#loop}.
-	 * @param ctx the parse tree
-	 */
-	void exitLoop(lolcodeParser.LoopContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link lolcodeParser#declaration}.
 	 * @param ctx the parse tree
 	 */
@@ -116,16 +106,6 @@ public interface lolcodeListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitInput_block(lolcodeParser.Input_blockContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link lolcodeParser#func_decl}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunc_decl(lolcodeParser.Func_declContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link lolcodeParser#func_decl}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunc_decl(lolcodeParser.Func_declContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link lolcodeParser#assignment}.
 	 * @param ctx the parse tree
@@ -267,26 +247,6 @@ public interface lolcodeListener extends ParseTreeListener {
 	 */
 	void exitMod(lolcodeParser.ModContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link lolcodeParser#r_all}.
-	 * @param ctx the parse tree
-	 */
-	void enterR_all(lolcodeParser.R_allContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link lolcodeParser#r_all}.
-	 * @param ctx the parse tree
-	 */
-	void exitR_all(lolcodeParser.R_allContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link lolcodeParser#r_any}.
-	 * @param ctx the parse tree
-	 */
-	void enterR_any(lolcodeParser.R_anyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link lolcodeParser#r_any}.
-	 * @param ctx the parse tree
-	 */
-	void exitR_any(lolcodeParser.R_anyContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link lolcodeParser#nope}.
 	 * @param ctx the parse tree
 	 */
@@ -296,16 +256,6 @@ public interface lolcodeListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNope(lolcodeParser.NopeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link lolcodeParser#func}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunc(lolcodeParser.FuncContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link lolcodeParser#func}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunc(lolcodeParser.FuncContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link lolcodeParser#r_an}.
 	 * @param ctx the parse tree
